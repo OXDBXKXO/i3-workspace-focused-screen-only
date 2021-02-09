@@ -10,5 +10,5 @@ To use it, `chmod +x` it and update `workspace prev`and`workspace next`occurence
 
 ```
 #bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Left exec --no-startup-id "~/scripts/i3-workspace-focused-screen-only.py prev"
+bindsym $mod+Control+Left exec --no-startup-id "~/scripts/focused-workspace-only.py prev"
 ```
