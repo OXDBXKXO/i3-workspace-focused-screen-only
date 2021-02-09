@@ -8,4 +8,4 @@ This script adds option to switch between outputs, which I personally use with [
 
 * `prev_num|next_num`: calls `i3-msg workspace prev|next`
 * `prev_same_output|next_same_output`: calls `i3-msg workspace prev_on_output|next_on_output`
-* `prev_output|next_output`: change focus to prev|next output
+* `prev_output|next_output`: changes focus to prev|next output
