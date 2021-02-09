@@ -1,14 +1,11 @@
-# i3-workspace-focused-screen-only
+# i3-workspace-multi-screen
 
-When using multiple screens in i3, workspace numbers are shared, causing workspace prev and next commands to switch focus from one display to another.
+When using multiple screens in i3, you can use `workspace prev|next` to switch to prev|next workspace following workspaces numbers, and `workspace prev_on_output|next_on_output` to restrict the switch to the focused output only.
 
-This script allows switching to previous and next workspaces on the focused screen only, which is the behavior you expect when using tools like [fusuma](https://github.com/iberianpig/fusuma).
+This script adds option to switch between outputs, which I personally use with [fusuma](https://github.com/iberianpig/fusuma).
 
-To use it, `chmod +x` it and update `workspace prev` and `workspace next` occurences in i3 config file to use the script instead (with `prev` or `next` as parameter).
+**Available parameters:**
 
-**Example:**
-
-```
-#bindsym $mod+Control+Left workspace prev
-bindsym $mod+Control+Left exec --no-startup-id "~/scripts/focused-workspace-only.py prev"
-```
+* `prev_num|next_num`: calls `i3-msg workspace prev|next`
+* `prev_same_output|next_same_output`: calls `i3-msg workspace prev_on_output|next_on_output`
+* `prev_output|next_output`: change focus to prev|next output
