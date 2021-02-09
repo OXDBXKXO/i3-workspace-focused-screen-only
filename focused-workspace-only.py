@@ -18,20 +18,20 @@ def getLayout():
     focused = 0
     focused_workspace = ""
 
-    for i, display in enumerate(i3_displays):
+    for display in i3_displays:
         if display['active'] == True:
             disp = { "name":display['name'], "workspaces":[] }
             layout.append(disp)
 
-    for i, workspace in enumerate(i3_workspaces):
-        for i, output in enumerate(layout):
+    for workspace in i3_workspaces:
+        for output in layout:
             if workspace['output'] == output['name']:
                 output['workspaces'].append(workspace['num'])
 
         if workspace['focused'] == True:
             focused = workspace['num']
 
-    for i, output in enumerate(layout):
+    for output in layout:
         if focused in output['workspaces']:
             focused_workspace = output['name']
     
@@ -40,7 +40,7 @@ def getLayout():
 def parseOptions(arguments=sys.argv):
     args = arguments[1:]
     if len(args) != 1:
-        console.log("Usage: {} prev|next".format(arguments[0]))
+        print("Usage: {} prev|next".format(arguments[0]))
         exit(1)
 
     return args[0]
