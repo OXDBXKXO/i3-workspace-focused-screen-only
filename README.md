@@ -2,7 +2,7 @@
 
 When using multiple screens in i3, workspace numbers are shared, causing workspace prev and next commands to switch focus from one display to another.
 
-This script allows switching to previous and next workspaces on the focused screen only, which is the behaviour you expect when using tools like [fusuma](https://github.com/iberianpig/fusuma).
+This script allows switching to previous and next workspaces on the focused screen only, which is the behavior you expect when using tools like [fusuma](https://github.com/iberianpig/fusuma).
 
 To use it, `chmod +x` it and update `workspace prev` and `workspace next` occurences in i3 config file to use the script instead (with `prev` or `next` as parameter).
 
