@@ -83,11 +83,8 @@ def main():
     if direction == "next_same_output":
         subprocess.run(["i3-msg", "workspace", "next_on_output"])
 
-    if "num" in direction or "same" in direction:
-        exit()
-
-    outputs, focused_output, focused_workspaces = getLayout()
-    print(outputs, focused_output, focused_workspaces)
+    if not "num" in direction and not "same" in direction:
+        outputs, focused_output, focused_workspaces = getLayout()
 
     if direction == "prev_output":
         goPrevOutput(outputs, focused_output, focused_workspaces)
